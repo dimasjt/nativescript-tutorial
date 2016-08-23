@@ -1,11 +1,11 @@
-<Page>
+<Page loaded="loaded">
   <StackLayout orientation="vertical">
     <Image src="https://www.nativescript.org/images/default-source/landingpages/logo.png" stretch="none" horizontalAlignment="center" />
 
-    <TextField hint="Email Address" keyboardType="email" autocorrect="false" autocapitalizationType="none" />
-    <TextField hint="Password" secure="true" />
+    <TextField id="email" text="{{ email }}" hint="Email Address" keyboardType="email" autocorrect="false" autocapitalizationType="none" />
+    <TextField id="password" text="password" hint="Password" secure="true" />
 
-    <Button text="Sign in" />
-    <Button text="Sign up for Groceries" class="link" />
+    <Button text="Sign in" tap="signIn" />
+    <Button text="Sign up for Groceries" class="link" tap="register" />
   </StackLayout>
 </Page>
