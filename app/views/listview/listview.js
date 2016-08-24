@@ -17,10 +17,20 @@ exports.add = function(){
 
     pageData.tasks.push({ name: task });
     pageData.set('task', '')
+    page.getViewById('tasksList').animate({
+      opacity: 1,
+      duration: 3000
+    })
   }
 };
 
 exports.loaded = function(args){
   page = args.object;
+  var listView = page.getViewById('tasksList');
   page.bindingContext = pageData;
+
+  listView.animate({
+    opacity: 1,
+    duration: 1000
+  })
 };
