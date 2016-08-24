@@ -1,0 +1,6 @@
+<Page>
+  <StackLayout orientation="vertical">
+    <Label text="Hello Worl"/>
+    <Button text="ListView" clas="link" tap="toListView" />
+  </StackLayout>
+</Page>

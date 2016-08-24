@@ -1,0 +1,15 @@
+<Page loaded="loaded">
+  <GridLayout rows="auto, *" columns="2*, *">
+    <TextField id="task" text="{{ task }}" hint="Input new task..." row="0" col="0"/>
+    <Button text="Add" row="0" col="1" tap="add"/>
+
+    <ListView items="{{ tasks }}" row="1" colSpan="2">
+      <ListView.itemTemplate>
+        <GridLayout columns="*, auto">
+          <Label text="{{ name }}" horizontalAlignment="left" verticalAlignment="center"/>
+          <Button text="delete" col="1" />
+        </GridLayout>
+      </ListView.itemTemplate>
+    </ListView>
+  </GridLayout>
+</Page>
